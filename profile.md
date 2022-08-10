@@ -6,17 +6,17 @@
 > 요청자가 SCSC 회원인지 확인합니다.
 
 #### URL
-* GET /users/{id}
+* GET /profile/{id}
 
 #### URL 파라미터
 * id: 회원 아이디 [string]
 
 #### 데이터 파라미터
-* nickname: 닉네임 정보 [string]
+* username: 닉네임 정보 [string]
 * name: 사용자의 실명 [string]
 * profileImageUrl: 프로필 이미지 URL [string]
 * thumbnailImageUrl: 프로필 썸네일 이미지 URL [string]
-* userState: 회원 등급(동아리원, 졸업생, 일반회원) [string]
+* userType: 회원 등급(동아리원, 졸업생, 일반회원) [string]
 * email: 사용자의 이메일 주소 [string]
 
 ------------
@@ -27,11 +27,11 @@
 * 내용
 ``` Javascript
 {
-  nickname: [string],
+  username: [string],
   name: [string],
   profileImageUrl: [string],
   thumbnailImageUrl: [string],
-  userState: [string],
+  userType: [string],
   email: [string]
 }
 ```
@@ -39,11 +39,11 @@
 #### 응답 예시
 ``` Javascript
 {
-  "nickname": 'GilDong',
+  "username": 'GilDong',
   "name": '홍길동',
   "profileImageUrl": 'https://server_domain/.../aaa.jpeg',
   "thumbnailImageUrl": 'https://server_domain/.../bbb.jpeg',
-  "userState": '동아리원',
+  "userType": '동아리원',
   "email": 'gildonghong@snu.ac.kr'
 }
 ```
